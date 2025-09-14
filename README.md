@@ -89,4 +89,3 @@ This is where the app's behavior is implemented.
 -   **Built by Navaneeth Sankar K P** ([LinkedIn](https://www.linkedin.com/in/navaneeth-sankar-k-p)).
 -   **Design Inspiration**: The user interface and overall aesthetic are inspired (initial brainstorming) by the beautiful design work of Hristo Hristov ([LinkedIn](https://www.linkedin.com/in/hristo-hristov-2bb0341a8)).
 -   **Professor**: A special thanks to my professor, **Chesta Malkani** ([LinkedIn](https://www.linkedin.com/in/chesta-malkani-25a550137)), for everything she taught, which made this project possible.
--   **PhotoView**: The Android version of this project uses the [PhotoView library](https://github.com/Baseflow/PhotoView) for the zoomable full-screen image viewer. An equivalent library or custom implementation _will be_ used in the final version of this iOS app.
