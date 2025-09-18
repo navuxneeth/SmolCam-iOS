@@ -2,7 +2,7 @@
 
 The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept camera application that simulates manual camera controls in a clean, intuitive way. It's designed for those who appreciate the aesthetics of photography and enjoy having retro-style tactile control over their image settings :)
 
-**This project is a work in progress.** It will be updated again by **September 31st, 2025**, with full features.
+**This project is a work in progress.** It will be updated again by **September 30th, 2025**, with full features.
 
 ## Screenshots
 
@@ -15,8 +15,6 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
     -   **Saturation Slider**: Adjust the color intensity of your image in real-time.
     -   **Grain Overlay**: Add an atmospheric, film-like grain effect with adjustable intensity.
 -   **Built-in Gallery**: View your captured moments in a beautiful, staggered grid gallery.
--   **Full-Screen Image Viewer**: Tap on any photo in the gallery to view it in a full-screen, zoomable interface.
--   **Elegant UI**: A clean, minimalist design with smooth animations and transitions.
 -   **Full-Screen Image Viewer**: Tap on any photo in the gallery to view it in a full-screen, zoomable interface.
 -   **Elegant UI**: A clean, minimalist design with smooth animations and transitions.
 -   **Manual Camera Controls (Planned)**: Adjust settings for the exposure triangle with interactive sliders:
@@ -41,12 +39,35 @@ This is a standard Xcode project.
 SmolCam-iOS is a mobile application for iOS that simulates a camera interface with manual controls and image filters. It's designed to provide a tactile, retro-inspired user experience. The application has three main screens:
 
 -   **Main Camera Screen (ViewController)**: The primary interface where users can adjust camera settings, apply filters, and pretend to take pictures.
--   **Gallery Screen**: A screen that displays a collection of pre-defined images in a staggered grid.
--   **Image Viewer Screen**: A fullscreen viewer to see gallery images up close, with pinch-to-zoom functionality.
+-   **Gallery Screen (GalleryViewController)**: A screen that displays a collection of pre-defined images in a staggered grid.
+-   **Image Viewer Screen (ImageViewerController)**: A fullscreen viewer to see gallery images up close, with pinch-to-zoom functionality.
 
 The project is built using **Swift**, the modern, recommended language for iOS development. A key aspect of this project is its heavy reliance on **Xcode's Storyboards** for laying out the user interface. This visual approach is a departure from the Android version's XML-based layouts. Much of the UI is designed by dragging, dropping, and connecting elements visually. Consequently, the Swift code is less about programmatically creating UI from scratch and more focused on defining the logic for the drag-and-drop interactions, handling UI events, and managing the flow between different views.
 
 ### 2. Project Structure and Configuration Files
+
+````
+.
+├── SmolCam
+│   ├── AppDelegate.swift
+│   ├── Assets.xcassets
+│   ├── Base.lproj
+│   │   ├── LaunchScreen.storyboard
+│   │   └── Main.storyboard
+│   ├── Camera.storyboard
+│   ├── Gallery.storyboard
+│   ├── GalleryImageCell.swift
+│   ├── GalleryViewController.swift
+│   ├── ImageViewerController.swift
+│   ├── Info.plist
+│   ├── SceneDelegate.swift
+│   └── ViewController.swift
+├── SmolCam.xcodeproj
+│   ├── project.pbxproj
+│   └── project.xcworkspace
+│       └── contents.xcworkspacedata
+└── README.md
+````
 
 -   **`SmolCam.xcodeproj`**
     This is the main project file for Xcode. It contains all the settings for the build process, manages the file structure, and links all the necessary frameworks and dependencies.
@@ -83,6 +104,12 @@ This is where the app's behavior is implemented.
 
 -   **`ViewController.swift`**
     This is the most complex class, orchestrating the main camera screen. It manages the UI state by connecting to the UI elements defined in the Storyboard via `@IBOutlet`s. It also contains the `@IBAction` functions that define what happens when a user interacts with a button or a slider. It handles the logic for both filter sliders (saturation, grain) and manual controls (Aperture, Shutter Speed, etc.) and implements the shutter animation effect.
+-   **`GalleryViewController.swift`**
+    This class manages the Gallery screen, displaying a grid of images.
+-   **`ImageViewerController.swift`**
+    This class handles the full-screen image viewing with zoom functionality.
+-   **`GalleryImageCell.swift`**
+    This defines the custom cell used in the gallery's collection view.
 
 ## Credits
 
