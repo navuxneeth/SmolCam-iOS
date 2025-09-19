@@ -6,7 +6,8 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
 
 ## Screenshots
 
-*(Screenshots will be added in a future update.)*
+<img width="6764" height="2400" alt="image" src="https://github.com/user-attachments/assets/8ac0f054-e322-415a-ac5f-030f58588349" />
+
 
 ## Features
 
