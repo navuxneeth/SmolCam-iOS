@@ -16,7 +16,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmolCam" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -32,6 +32,9 @@
                                         <state key="normal" image="gearshape.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="regular"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qn0-9B-lhd" kind="show" id="S5G-9Q-KmY"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-VO-JPn">
                                         <rect key="frame" x="143" y="17" width="85" height="85"/>
@@ -58,7 +61,7 @@
                                 </subviews>
                                 <color key="backgroundColor" name="bottom_controls_background"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPG-Q7-zED">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tPG-Q7-zED">
                                 <rect key="frame" x="11" y="67" width="370" height="370"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grain_background" translatesAutoresizingMaskIntoConstraints="NO" id="KEC-7b-w6R">
@@ -257,6 +260,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tIE-cc-dEt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2355" y="-27"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="6TP-qJ-MYF">
+            <objects>
+                <viewController id="qn0-9B-lhd" customClass="SettingsViewController" customModule="SmolCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZPP-z8-hrL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-ld-hVt">
+                                <rect key="frame" x="38" y="557" width="317" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g6B-FT-PoG">
+                                <rect key="frame" x="38" y="162" width="310" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Original Theme"/>
+                                    <segment title="Vibrant Theme"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="accent_red"/>
+                                <connections>
+                                    <action selector="themeChanged:" destination="qn0-9B-lhd" eventType="valueChanged" id="pnu-pg-1tx"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LC8-xE-j4b">
+                                <rect key="frame" x="225" y="733" width="129" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" Repository &gt; "/>
+                                <connections>
+                                    <action selector="repositoryButtonTapped:" destination="qn0-9B-lhd" eventType="touchUpInside" id="PDr-f1-Kkv"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNr-xo-E2i">
+                                <rect key="frame" x="38" y="228" width="316" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IP7-re-Cc4">
+                                <rect key="frame" x="38" y="733" width="171" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="  Reach Developer  "/>
+                                <connections>
+                                    <action selector="contactButtonTapped:" destination="qn0-9B-lhd" eventType="touchUpInside" id="mKv-wr-Dzt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="abx-L3-Q7c"/>
+                        <color key="backgroundColor" name="screen_background"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ohB-V2-Jke"/>
+                    <connections>
+                        <outlet property="contactButton" destination="IP7-re-Cc4" id="Oto-41-1wv"/>
+                        <outlet property="creditsTextView" destination="jEn-ld-hVt" id="PtX-7a-ix0"/>
+                        <outlet property="repositoryButton" destination="LC8-xE-j4b" id="L9U-iC-myF"/>
+                        <outlet property="storageImageView" destination="zNr-xo-E2i" id="p5P-dj-Qie"/>
+                        <outlet property="themeSegmentedControl" destination="g6B-FT-PoG" id="98A-Hm-bVk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wut-DD-PCr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2994.6564885496182" y="-27.464788732394368"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IqR-W7-v3H">
