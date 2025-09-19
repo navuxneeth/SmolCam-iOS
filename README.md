@@ -11,18 +11,8 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
 
 ## Features
 
--   **Two Control Modes**: Seamlessly switch between Manual Mode and Filter Mode.
--   **Live Creative Filters**:
     -   **Saturation Slider**: Adjust the color intensity of your image in real-time.
     -   **Grain Overlay**: Add an atmospheric, film-like grain effect with adjustable intensity.
--   **Built-in Gallery**: View your captured moments in a beautiful, staggered grid gallery.
--   **Full-Screen Image Viewer**: Tap on any photo in the gallery to view it in a full-screen, zoomable interface.
--   **Elegant UI**: A clean, minimalist design with smooth animations and transitions.
--   **Manual Camera Controls (Planned)**: Adjust settings for the exposure triangle with interactive sliders:
-    -   Aperture (F-stop)
-    -   Shutter Speed (S)
-    -   Exposure Value (EV)
-    -   ISO
 
 ## How to Build
 
