@@ -2,7 +2,7 @@
 
 The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept camera application that simulates manual camera controls in a clean, intuitive way. It's designed for those who appreciate the aesthetics of photography and enjoy having retro-style tactile control over their image settings :)
 
-**This project is a work in progress.** It will be updated again by **September 30th, 2025**, with full features.
+**This project is a work in progress.** It will be updated again by **September 23rd, 2025**, with full features.
 
 ## Screenshots
 
