@@ -13,6 +13,8 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
 
 **Grain Overlay**: Add an atmospheric, film-like grain effect with adjustable intensity.
 
+**Theme Switch**: Switch between Red-Green and Blue-Yellow (UserDefaults storage).
+
 ## How to Build
 
 This is a standard Xcode project.
