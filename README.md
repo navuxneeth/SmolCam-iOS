@@ -9,8 +9,9 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
 
 ## Features
 
-    -   **Saturation Slider**: Adjust the color intensity of your image in real-time.
-    -   **Grain Overlay**: Add an atmospheric, film-like grain effect with adjustable intensity.
+**Saturation Slider**: Adjust the color intensity of your image in real-time.
+
+**Grain Overlay**: Add an atmospheric, film-like grain effect with adjustable intensity.
 
 ## How to Build
 
