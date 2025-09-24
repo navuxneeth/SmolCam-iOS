@@ -20,8 +20,11 @@ The iOS version of [SmolCam](https://github.com/navuxneeth/SmolCam), a concept c
 This is a standard Xcode project.
 
 1.  Clone the repository.
+
 2.  Open the `SmolCam.xcodeproj` file in Xcode.
+
 3.  Select a target simulator or a connected iOS device.
+
 4.  Build and run the application.
 
 ## Code Explanation
@@ -31,7 +34,9 @@ This is a standard Xcode project.
 SmolCam-iOS is a mobile application for iOS that simulates a camera interface with manual controls and image filters. It's designed to provide a tactile, retro-inspired user experience. The application has three main screens:
 
 -   **Main Camera Screen (ViewController)**: The primary interface where users can apply filters (grain, saturation), and pretend to take pictures _(feel free to build onto this project to connect camera hardware)_.
+
 -   **Gallery Screen (GalleryViewController)**: A screen that displays a collection of pre-defined images in a staggered grid.
+
 -   **Image Viewer Screen (ImageViewerController)**: A fullscreen viewer to see gallery images up close, with pinch-to-zoom functionality.
 
 The project is built using **Swift**, the modern, recommended language for iOS development. A key aspect of this project is its heavy reliance on **Xcode's Storyboards** for laying out the user interface. This visual approach is a departure from the Android version's XML-based layouts. Much of the UI is designed by dragging, dropping, and connecting elements visually. Consequently, the Swift code is less about programmatically creating UI from scratch and more focused on defining the logic for the drag-and-drop interactions, handling UI events, and managing the flow between different views.
@@ -74,11 +79,11 @@ The project is built using **Swift**, the modern, recommended language for iOS d
 
 This is the main module containing all the application's code and resources.
 
--   **`AppDelegate.swift`**
-    This file contains the `AppDelegate` class, which is the entry point of the application and is responsible for handling app-level events, such as launching and termination.
+**`AppDelegate.swift`**
+This file contains the `AppDelegate` class, which is the entry point of the application and is responsible for handling app-level events, such as launching and termination.
 
--   **`SceneDelegate.swift`**
-    For apps that support multiple windows or scenes, this file manages the lifecycle of a scene, which is an instance of the app's UI.
+**`SceneDelegate.swift`**
+For apps that support multiple windows or scenes, this file manages the lifecycle of a scene, which is an instance of the app's UI.
 
 ### 4. The User Interface: Storyboards and Resources
 
@@ -107,19 +112,19 @@ This is where the app's behavior is implemented.
 
 The main screen of the application, managed by `ViewController.swift`, is where the core user interactions take place. Here’s a breakdown of how the sliders and other elements work:
 
--   **Image Filtering with Core Image**: The app uses Apple's **Core Image** framework to apply real-time filters to the displayed image. Specifically, the `CIFilter.colorControls()` filter is used to adjust the saturation of the image. The `CIContext` is used to render the output `CIImage` into a `CGImage` that can be displayed in a `UIImageView`.
+**Image Filtering with Core Image**: The app uses Apple's **Core Image** framework to apply real-time filters to the displayed image. Specifically, the `CIFilter.colorControls()` filter is used to adjust the saturation of the image. The `CIContext` is used to render the output `CIImage` into a `CGImage` that can be displayed in a `UIImageView`.
 
--   **Saturation Slider**: The saturation slider (`saturationSlider`) is connected to an `@IBAction` function called `saturationSliderDidChange`. To prevent the filter from being applied too frequently while the user is dragging the slider (which would be computationally expensive), a **debounce** mechanism is implemented using a `Timer`. This ensures that the `applyFilters()` function is only called after the user has stopped moving the slider for a brief moment (0.05 seconds).
+**Saturation Slider**: The saturation slider (`saturationSlider`) is connected to an `@IBAction` function called `saturationSliderDidChange`. To prevent the filter from being applied too frequently while the user is dragging the slider (which would be computationally expensive), a **debounce** mechanism is implemented using a `Timer`. This ensures that the `applyFilters()` function is only called after the user has stopped moving the slider for a brief moment (0.05 seconds).
 
--   **Grain Slider**: The grain effect is achieved by overlaying a semi-transparent image of grain on top of the main image. The `grainSlider` is connected to the `grainSliderDidChange` function, which adjusts the `alpha` (opacity) of the `grainOverlayImageView`. A higher slider value results in a more transparent overlay, reducing the intensity of the grain effect.
+**Grain Slider**: The grain effect is achieved by overlaying a semi-transparent image of grain on top of the main image. The `grainSlider` is connected to the `grainSliderDidChange` function, which adjusts the `alpha` (opacity) of the `grainOverlayImageView`. A higher slider value results in a more transparent overlay, reducing the intensity of the grain effect.
 
--   **Custom Font**: The application uses the **Roboto** font, which is included in the project and registered in the `Info.plist` file under the key `UIAppFonts`. This makes the font available to be used throughout the application's UI.
+**Custom Font**: The application uses the **Roboto** font, which is included in the project and registered in the `Info.plist` file under the key `UIAppFonts`. This makes the font available to be used throughout the application's UI.
 
 ## Credits
 
--   **Built by Navaneeth Sankar K P** ([LinkedIn](https://www.linkedin.com/in/navaneeth-sankar-k-p)).
+**Built by Navaneeth Sankar K P** ([LinkedIn](https://www.linkedin.com/in/navaneeth-sankar-k-p)).
 
--   **Design Inspiration**: The user interface and overall aesthetic are inspired (initial brainstorming) by the beautiful design work of Hristo Hristov ([LinkedIn](https://www.linkedin.com/in/hristo-hristov-2bb0341a8)).
+**Design Inspiration**: The user interface and overall aesthetic are inspired (initial brainstorming) by the beautiful design work of Hristo Hristov ([LinkedIn](https://www.linkedin.com/in/hristo-hristov-2bb0341a8)).
 
--   **Professor**: A special thanks to my professor, **Chesta Malkani** ([LinkedIn](https://www.linkedin.com/in/chesta-malkani-25a550137)), for everything she taught, which made this project possible.
+**Professor**: A special thanks to my professor, **Chesta Malkani** ([LinkedIn](https://www.linkedin.com/in/chesta-malkani-25a550137)), for everything she taught, which made this project possible.
 
